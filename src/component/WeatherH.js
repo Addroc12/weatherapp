@@ -4,7 +4,7 @@ import WeatherC from './WeatherC'
 const WeatherH = () => {
 const [weather , setWeather] = useState('')
 const [search, setSearch] = useState('')
-const [url, setUrl] = useState('https://api.openweathermap.org/data/2.5/weather?q=Chandigarh&appid=9d8feb2cc605385aeae2a01b23f64e92')
+const [url, setUrl] = useState('https://api.openweathermap.org/data/2.5/weather?q=Chandigarh&app')
 
 useEffect(() => {
    data() 
@@ -22,7 +22,7 @@ const data = async () =>  await fetch(url)
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        setUrl(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=9d8feb2cc605385aeae2a01b23f64e92`)
+        setUrl(`https://api.openweathermap.org/data/2.5/weather?q=${search}`)
     }
 
 
